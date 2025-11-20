@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <filter id="glow">
+        <feGaussianBlur stdDeviation="12" result="coloredBlur"></feGaussianBlur>
+        <feMerge>
+            <feMergeNode in="coloredBlur"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+    </filter>
+</defs>
+<path d="M336 160c18 14 40 26 64 28v64c-28-2-54-12-74-26v108c0 88-96 120-146 78-22-20-30-44-28-70 4-64 68-70 82-64v66c0 12-18 24-28 18-28-12-6-46 16-46 42 0 54-26 54-52V112h60z" fill="#00eaff" filter="url(#glow)"></path>
+</svg>

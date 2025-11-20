@@ -1,0 +1,94 @@
+/* === styles.css (Merged with Responsive Fixes) === */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap');
+:root{--accent:#8fd3ff;--accent2:#67e0c7;--muted:#9fb7cf;--yellow:#ffd400}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter,system-ui,Arial;background:transparent;color:#e6eef8;scroll-behavior:smooth}
+canvas#bg{position:fixed;inset:0;z-index:-1}
+.container{max-width:1100px;margin:0 auto;padding:20px;position:relative;z-index:2}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;background:transparent;position:relative;z-index:5}
+.brand{font-weight:700;font-size:18px}
+.navlinks{display:flex;gap:16px;align-items:center}
+.navlinks a, .navlinks button{color:#cfefff;text-decoration:none;padding:6px 8px;border-radius:6px;background:transparent;border:none;cursor:pointer}
+.login-pill{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#001;padding:8px 12px;border-radius:18px;font-weight:700}
+.dropdown{position:relative}
+.dropdown-menu{position:absolute;top:36px;right:0;background:rgba(2,6,12,0.9);padding:8px;border-radius:8px;display:none;min-width:180px}
+.dropdown-menu a{display:block;padding:8px;color:#dbeeff;text-decoration:none}
+.dropdown.show .dropdown-menu{display:block}
+
+/* Hero */
+.hero{padding:80px 20px;text-align:center}
+.hero h1{font-family:Georgia,serif;font-weight:800;font-size:36px;margin-bottom:8px;color:#dbeeff}
+.cta{display:inline-block;padding:10px 18px;border-radius:10px;background:#bfeaff;color:#001;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+
+/* Gallery */
+.section-title {font-size: 22px;margin: 18px 0;color: #dbeeff;font-weight: 700;}
+.carousel {overflow: hidden;border-radius: 12px;margin-bottom: 12px;box-shadow: 0 8px 30px rgba(0,0,0,0.6);} 
+.slides {display: flex;gap: 12px;transition: transform .6s ease;} 
+.slide-img {width: calc(100%/2 - 6px);height: 180px;object-fit: cover;border-radius: 12px;} 
+
+/* Game List */
+.game-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:12px}
+.game-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:12px;transition:transform .25s,box-shadow .25s;overflow:hidden;text-decoration:none;color:inherit}
+.game-card img{width:100%;height:110px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+.game-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+
+/* Cek box */
+.cek-box{background:rgba(255,255,255,0.03);padding:20px;border-radius:14px}
+.cek-row{display:flex;gap:10px;margin-top:12px}
+.cek-row input{flex:1;padding:12px;border-radius:10px;border:none;background:rgba(255,255,255,0.02);color:inherit}
+.cek-row button{padding:12px;border-radius:10px;border:none;background:var(--accent);color:#001;font-weight:700}
+
+/* About */
+.about-inner{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+
+/* Footer */
+.site-footer{padding:28px 36px;background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.5));margin-top:40px;position:relative;z-index:2}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.footer-grid h4{color:var(--accent);margin-bottom:8px}
+.footer-grid a{display:block;color:#cfefff;margin:6px 0;text-decoration:none}
+.footer-icons{display:flex;flex-direction:column;gap:18px;align-items:center}
+.footer-icons img {width: 22px;height: 22px;filter: drop-shadow(0 0 6px #00eaff);} 
+
+/* Reviews */
+.review-card{background:#070707;padding:18px;border-radius:12px;color:#fff;min-width:260px;margin:10px}
+.review-title{font-weight:700}
+.review-quote{font-style:italic;color:#ddd;margin:8px 0}
+.review-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);margin-top:8px}
+.stars{color:var(--yellow);font-size:20px}
+
+/* Login modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:500}
+.modal-card{background:linear-gradient(180deg,#06121a,#03121a);padding:18px;border-radius:10px;min-width:360px;color:#e6eef8;position:relative}
+.modal-tabs{display:flex;background:rgba(255,255,255,0.03);border-radius:8px;padding:4px;gap:6px}
+.tab-pill{flex:1;padding:8px;border-radius:8px;text-align:center;cursor:pointer;background:transparent;color:rgba(255,255,255,0.55)}
+.tab-pill.active{background:linear-gradient(90deg,#67e0c7,#8fd3ff);color:#001;font-weight:700}
+.input{width:100%;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;margin-top:8px}
+.continue-btn{margin-top:10px;padding:10px;border-radius:8px;border:none;background:linear-gradient(90deg,#67e0c7,#8fd3ff);color:#001;font-weight:700;cursor:pointer}
+
+/* Login page */
+.login-wrapper{max-width: 420px;margin: 80px auto;padding: 24px;background: rgba(255,255,255,0.03);border-radius: 14px;backdrop-filter: blur(6px);border: 1px solid rgba(255,255,255,0.05);}
+.login-title{font-size: 28px;font-weight: 800;text-align: center;margin-bottom: 6px;}
+.login-desc{text-align: center;color: #b7d5e8;margin-bottom: 18px;}
+.login-tabs{display:flex;background: rgba(255,255,255,0.04);padding:4px;border-radius:10px;margin-bottom:14px;}
+.login-tab{flex:1;text-align:center;padding:10px;cursor:pointer;border-radius:10px;font-weight:600;background:transparent;color:#bcd9ee;transition:.25s;}
+.login-tab.active{background: linear-gradient(90deg,#67e0c7,#8fd3ff);color:#001;}
+.login-form{display:none;}
+.login-form.active{display:block;}
+.login-input{width:100%;padding:12px;border-radius:10px;border:none;margin-top:10px;background:rgba(255,255,255,0.03);color:#e8f4ff}
+.login-btn{width:100%;padding:12px;border-radius:10px;border:none;margin-top:14px;background:linear-gradient(90deg,#67e0c7,#8fd3ff);color:#001;font-weight:700;cursor:pointer}
+.back-home{text-align:center;margin-top:14px}
+.back-home a{color:#9ddaff;text-decoration:none}
+
+/* Terms fix */
+.transparent-panel {background: rgba(0, 0, 0, 0.35) !important;backdrop-filter: blur(8px);border: 1px solid rgba(255, 255, 255, 0.08);padding: 24px;border-radius: 14px;}
+.transparent-panel *{color:#e9f4ff !important;opacity:1 !important;}
+
+
+/* ============================================================
+   RESPONSIVE FIXES
+============================================================ */
+
+@media (max-width: 900px){.topbar{padding:14px 20px;flex-wrap:wrap;gap:10px}.navlinks{flex-wrap:wrap;justify-content:center;gap:10px}.hero h1{font-size:28px;line-height:36px}.hero{padding:60px 20px}.slide-img{width:100%!important;height:160px}.slides{gap:8px}.about-inner{grid-template-columns:1fr;text-align:center}.about-inner img{width:90%;margin:0 auto}.footer-grid{flex-direction:column;text-align:center}.footer-icons{flex-direction:row;justify-content:center}.login-wrapper{margin:40px 16px;padding:20px}}
+
+@media (max-width: 600px){.brand{font-size:16px}.navlinks a,.navlinks button{padding:6px 6px;font-size:13px}.login-pill{padding:6px 10px;font-size:13px}.hero h1{font-size:24px}.game-card img{height:90px}.cek-row{flex-direction:column}.cek-row button{width:100%}.login-wrapper{max-width:94%;margin:30px auto}.transparent-panel{padding:16px}}

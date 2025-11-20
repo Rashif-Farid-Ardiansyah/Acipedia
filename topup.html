@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Acipedia — TopUp </title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<header class="topbar">
+  <div class="brand">Acipedia <span class="dot">.ID</span></div>
+  <nav class="navlinks">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="index.html#about">About</a>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle">More</button>
+      <div class="dropdown-menu">
+        <a href="index.html#cek">Cek Transaksi</a>
+        <a href="reviews.html">Ulasan</a>
+      </div>
+    </div>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="login.html">Login / Guest</a>
+    </nav>
+</header>
+
+<main class="container">
+  <section class="topup-panel" style="max-width:900px;margin-top:60px;">
+    <h3 class="section-title">Top up</h3>
+    <form id="tform" style="display:flex;flex-direction:column;gap:14px;">
+      <label>Game</label>
+      <select id="gameSelect" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;">
+        <option value="ml">Mobile Legends</option>
+        <option value="ff">Free Fire</option>
+        <option value="pubg">PUBG Mobile</option>
+        <option value="valorant">Valorant</option>
+        <option value="cod">COD Mobile</option>
+        <option value="hok">HOK</option>
+      </select>
+
+      <label>Player ID</label>
+      <input id="pid" placeholder="Enter ID / UID" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;">
+
+      <label>Topup Type</label>
+      <select id="type" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;">
+        <option>Diamond (dm)</option>
+        <option>UC</option>
+        <option>Points</option>
+      </select>
+
+      <label>Buyer Email</label>
+      <input id="email" type="email" placeholder="email@contoh.com" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;">
+
+      <label>Payment Methods</label>
+      <select id="pay" style="padding:12px;border-radius:8px;background:rgba(255,255,255,0.02);border:none;color:inherit;">
+        <option>GoPay</option>
+        <option>QRIS</option>
+        <option>Bank Transfer</option>
+      </select>
+
+      <div style="font-size:12px;color:var(--muted)">Note: This is a front-end example. There is no real payment processing.</div>
+
+      <button class="continue-btn" style="width:150px;padding:10px;border-radius:8px;border:none;background:linear-gradient(90deg,#67e0c7,#8fd3ff);color:#001;font-weight:700;cursor:pointer;">Pay / Checkout</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Peta Situs</h4>
+        <a href="index.html#home">Beranda</a>
+        <a href="topup.html">Topup</a>
+        <a href="index.html#cek">Cek Transaksi</a>
+        <a href="contact.html">Hubungi Kami</a>
+        <a href="reviews.html">Ulasan</a>
+      </div>
+      <div>
+        <h4>Dukungan</h4>
+        <div class="footer-icons">
+          <a href="https://wa.me/62895389142727" target="_blank">
+            <img src="assets/wa-neon.svg" alt="wa">
+          </a>
+          <a href="https://instagram.com/rasiiff" target="_blank">
+            <img src="assets/tiktok-neon.svg" alt="tiktok">
+          </a>
+          <a href="https://tiktok.com/@rasiffffff_" target="_blank">
+            <img src="assets/instagram-neon.svg" alt="instagram">
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Legalitas</h4>
+        <a href="terms.html">Syarat & Ketentuan</a>
+        <a href="privacy.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:14px">
+      <p>© <span id='year'></span> Acipedia .ID</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// populate game/type from query
+const params = new URLSearchParams(location.search);
+const game = params.get('game');
+if(game){
+  const map = {ml:'Mobile Legends',ff:'Free Fire',pubg:'PUBG Mobile',valorant:'Valorant',cod:'COD Mobile',hok:'HOK'};
+  const sel = document.getElementById('gameSelect');
+  if(sel && map[game]) sel.value = game;
+}
+// simple submit handler
+document.getElementById('tform').addEventListener('submit', function(e){ e.preventDefault(); alert('Checkout preview sent — no payment integration.'); });
+// set year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/app.js"></script>
+</body></html>

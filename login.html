@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Guest</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+<canvas id="bg"></canvas>
+
+<div class="login-wrapper">
+
+    <div class="login-title">Login / Guest</div>
+    <div class="login-desc">Masuk atau lanjut sebagai tamu.</div>
+
+    <div class="login-tabs">
+        <div class="login-tab active" id="tabGuest">Guest</div>
+        <div class="login-tab" id="tabLogin">Login</div>
+    </div>
+
+    <!-- Guest Form -->
+    <div class="login-form active" id="formGuest">
+        <input class="login-input" id="guestEmail" placeholder="Email kamu (opsional)">
+        <button class="login-btn" id="guestBtn">Continue as Guest</button>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form" id="formLogin">
+        <input class="login-input" id="loginEmail" placeholder="Email">
+        <input class="login-input" id="loginPass" type="password" placeholder="Password">
+        <button class="login-btn" id="loginBtn">Login</button>
+    </div>
+
+    <div class="back-home">
+        <a href="index.html">← Kembali ke Beranda</a>
+    </div>
+
+</div>
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>
